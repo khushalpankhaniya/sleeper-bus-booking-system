@@ -17,7 +17,7 @@ const seedDatabase = async () => {
       process.exit();
     }
 
-    /* ===== BUS ===== */
+    /* ===== bus ===== */
     const bus = await Bus.create({
       name: "Sleeper Express",
       route: "Ahmedabad To Mumbai",
@@ -25,7 +25,7 @@ const seedDatabase = async () => {
       layout: "2x1 sleeper"
     });
 
-    /* ===== SEATS ===== */
+    /* ===== seats ===== */
     const seats = [];
     for (let i = 1; i <= bus.totalSeats; i++) {
       seats.push({
@@ -37,7 +37,7 @@ const seedDatabase = async () => {
     await Seat.insertMany(seats);
 
 
-    /* ===== STATIONS ===== */
+    /* ===== stations ===== */
     await Station.insertMany([
       {
         name: "Ahmedabad",
@@ -82,8 +82,8 @@ const seedDatabase = async () => {
     ]);
 
 
-    /* ===== MEALS ===== */
-    /* ===== MEALS ===== */
+
+    /* ===== meals ===== */
     await Meal.insertMany([
       {
         name: "Gujarati Kathiyawadi Thali",
