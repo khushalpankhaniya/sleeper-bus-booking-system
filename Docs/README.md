@@ -61,38 +61,48 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 ## 📁 Project Structure
 
 ```text
-sleeper-bus-booking/
+SLEEPER-BUS-BOOKING/
 │
-├── api/
-│   ├── booking.api.js
-│   ├── meal.api.js
-│   ├── seat.api.js
-│   └── station.api.js
+├── Docs/
+│   ├── API_DOCUMENTATION.md
+│   ├── PREDICTION_APPROACH.md
+│   └── README.md
 │
-├── config/
-│   ├── db.js
-│   └── seed.js
+├── ML/
+│   └── confirmationPrediction.js
 │
-├── handlers/
-│   ├── booking.handler.js
-│   ├── meal.handler.js
-│   ├── seat.handler.js
-│   └── station.handler.js
-│
-├── models/
-│   ├── Booking.js
-│   ├── Bus.js
-│   ├── Meal.js
-│   ├── Seat.js
-│   └── Station.js
-│
-├── node_modules/
-├── .env
-├── .env.example
-├── server.js
-└── package.json
-```
-
+├── sleeper-bus-booking/
+│   ├── api/
+│   │   ├── booking.api.js
+│   │   ├── meal.api.js
+│   │   ├── seat.api.js
+│   │   └── station.api.js
+│   │
+│   ├── config/
+│   │   ├── dateUtils.js
+│   │   ├── db.js
+│   │   └── seed.js
+│   │
+│   ├── handlers/
+│   │   ├── booking.handler.js
+│   │   ├── meal.handler.js
+│   │   ├── seat.handler.js
+│   │   └── station.handler.js
+│   │
+│   ├── models/
+│   │   ├── Booking.js
+│   │   ├── Bus.js
+│   │   ├── Meal.js
+│   │   ├── Seat.js
+│   │   └── Station.js
+│   │
+│   ├── node_modules/
+│   ├── .env
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
 
 ## 🌱 Database Seeding (`seed.js`)
 
