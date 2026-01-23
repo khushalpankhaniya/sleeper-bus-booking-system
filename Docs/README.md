@@ -19,19 +19,10 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ---
 
-## ⚙️ System Assumptions
-- Only **one sleeper bus** exists in the system
-- The bus has **multiple intermediate stations**
-- Payment gateway integration is **not required**
-- AI/ML prediction is **simulated (mock logic)**
-
----
-
 ## 🚀 Core Features
 
 1. **Seat Availability Display**
    - Displays all sleeper seats
-   - Clearly distinguishes available and booked seats
 
 2. **Seat Selection & Booking**
    - Users can select one or more seats
@@ -69,69 +60,45 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ## 📁 Project Structure
 
+```text
 sleeper-bus-booking/
 │
 ├── api/
-│ ├── booking.api.js
-│ ├── meal.api.js
-│ ├── seat.api.js
-│ └── station.api.js
+│   ├── booking.api.js
+│   ├── meal.api.js
+│   ├── seat.api.js
+│   └── station.api.js
 │
 ├── config/
-│ ├── db.js
-│ └── seed.js
+│   ├── db.js
+│   └── seed.js
 │
 ├── handlers/
-│ ├── booking.handler.js
-│ ├── meal.handler.js
-│ ├── seat.handler.js
-│ └── station.handler.js
+│   ├── booking.handler.js
+│   ├── meal.handler.js
+│   ├── seat.handler.js
+│   └── station.handler.js
 │
 ├── models/
-│ ├── Booking.js
-│ ├── Bus.js
-│ ├── Meal.js
-│ ├── Seat.js
-│ └── Station.js
+│   ├── Booking.js
+│   ├── Bus.js
+│   ├── Meal.js
+│   ├── Seat.js
+│   └── Station.js
 │
 ├── node_modules/
 ├── .env
 ├── .env.example
 ├── server.js
 └── package.json
+```
+
 
 ## 🌱 Database Seeding (`seed.js`)
 
 The file `config/seed.js` is used to **populate the database with initial data**.  
-This step is **mandatory** for the application to work correctly, as the system depends on preloaded data.
-
 ⚠️ **You must run `seed.js` before starting the server for the first time.**
 
----
-
-### 📦 Seeded Data Includes
-
-- **One Sleeper Bus**
-- **30 Sleeper Seats**
-  - Upper and Lower berths
-- **Route Stations**
-  - Ahmedabad  
-  - Nadiad  
-  - Vadodara  
-  - Bharuch  
-  - Surat  
-  - Mumbai
-- **Predefined Meal Options**
-  - Veg, Non-Veg, Jain, Kids meals
-
----
-
-### ❓ Why `seed.js` is Important
-
-- Eliminates manual data entry
-- Provides consistent and reliable test data
-- Makes project setup easier for reviewers
-- Ensures the system is usable immediately after setup
 
 ---
 
@@ -141,3 +108,11 @@ This step is **mandatory** for the application to work correctly, as the system 
 ```bash
 git clone <your-github-repo-url>
 cd sleeper-bus-booking
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory and add the following environment variables:
+
+```env
+MONGO_DB_URL=mongodb://127.0.0.1:27017/bus_booking
+PORT=
