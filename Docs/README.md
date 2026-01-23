@@ -104,6 +104,8 @@ SLEEPER-BUS-BOOKING/
 │   ├── package-lock.json
 │   └── server.js
 
+---
+
 ##  Database Seeding (`seed.js`)
 
 The file `config/seed.js` is used to **populate the database with initial data**.  
