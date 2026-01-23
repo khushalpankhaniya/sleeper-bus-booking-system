@@ -8,65 +8,35 @@ import { calculateDaysBeforeJourney } from "../config/dateUtils.js";
 /* ================= CREATE BOOKING ================= */
 export const createReservation = async (req, res) => {
   try {
-    const {
-      fromStation,
-      toStation,
-      journeyDate,
-      seatIds,
-      passengerName,
-      passengerPhone,
-      mealId
-    } = req.body;
+    const { fromStation, toStation, journeyDate, seatIds, passengerName, passengerPhone, mealId } = req.body;
 
-    /* -------- Validation -------- */
+    /* ------validation -------- */
     if (
-      !fromStation ||
-      !toStation ||
-      !journeyDate ||
-      !seatIds ||
-      !Array.isArray(seatIds) ||
-      seatIds.length === 0 ||
-      !passengerName ||
-      !passengerPhone
-    ) {
-      return res.status(400).json({
-        message: "All required fields must be provided"
-      });
+      !fromStation || !toStation || !journeyDate || !seatIds || !Array.isArray(seatIds) || seatIds.length === 0 || !passengerName || !passengerPhon) {
+      return res.status(400).json({ message: "All required fields must be provided" });
     }
 
     if (passengerPhone.length !== 10) {
-      return res.status(400).json({
-        message: "Invalid phone number"
-      });
+      return res.status(400).json({ message: "Invalid phone number" });
     }
 
     /* -------- Fetch Seats -------- */
     const seats = await Seat.find({ _id: { $in: seatIds } });
 
     if (seats.length !== seatIds.length) {
-      return res.status(404).json({
-        message: "Seat not found"
-      });
+      return res.status(404).json({ message: "Seat not found" });
     }
 
     const unavailableSeat = seats.find(seat => !seat.isAvailable);
     if (unavailableSeat) {
-      return res.status(400).json({
-        message: `Seat ${unavailableSeat.seatNo} is already booked`
-      });
+      return res.status(400).json({ message: `Seat ${unavailableSeat.seatNo} is already booked` });
     }
 
-    /* -------- ML Feature Calculation -------- */
-    const daysBeforeJourney = calculateDaysBeforeJourney(
-      new Date(),
-      journeyDate
-    );
+    /* -------- ML  Calculation -------- */
+    const daysBeforeJourney = calculateDaysBeforeJourney(new Date(), journeyDate);
 
     const confirmationProbability = predictConfirmationProbability({
-      daysBeforeJourney,
-      seatsBooked: seatIds.length,
-      hasMeal: !!mealId,
-      isWeekend: [0, 6].includes(new Date(journeyDate).getDay())
+      daysBeforeJourney, seatsBooked: seatIds.length, hasMeal: !!mealId, isWeekend: [0, 6].includes(new Date(journeyDate).getDay())
     });
 
     /* -------- Create Booking (STORE prediction) -------- */
