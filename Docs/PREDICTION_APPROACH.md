@@ -1,4 +1,4 @@
-## 🤖 Booking Confirmation Prediction – Weight Explanation
+## Booking Confirmation Prediction – Weight Explanation
 
 The booking confirmation probability is calculated using a **weighted scoring approach**.  
 Each booking starts with a **base probability of 50%**, and additional weights are added or subtracted based on booking behavior.

@@ -1,11 +1,11 @@
-# 🚌 Sleeper Bus Ticket Booking System  
+#  Sleeper Bus Ticket Booking System  
 Ahmedabad → Mumbai  
 
 AI/ML Software Engineer Assignment
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 This project is a **web-based Sleeper Bus Ticket Booking System** for a sleeper bus operating between **Ahmedabad and Mumbai** with multiple intermediate stations.
 
 The system allows users to:
@@ -19,7 +19,7 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ---
 
-## 🚀 Core Features
+##  Core Features
 
 1. **Seat Availability Display**
    - Displays all sleeper seats
@@ -48,7 +48,7 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **ODM:** Mongoose
@@ -58,7 +58,7 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 SLEEPER-BUS-BOOKING/
@@ -104,22 +104,22 @@ SLEEPER-BUS-BOOKING/
 │   ├── package-lock.json
 │   └── server.js
 
-## 🌱 Database Seeding (`seed.js`)
+##  Database Seeding (`seed.js`)
 
 The file `config/seed.js` is used to **populate the database with initial data**.  
-⚠️ **You must run `seed.js` before starting the server for the first time.**
+ **You must run `seed.js` before starting the server for the first time.**
 
 
 ---
 
-## ▶️ Project Setup
+## ▶ Project Setup
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 ```bash
 git clone <your-github-repo-url>
 cd sleeper-bus-booking
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 Create a `.env` file in the root directory and add the following environment variables:
 
