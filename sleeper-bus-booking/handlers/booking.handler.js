@@ -12,7 +12,7 @@ export const createReservation = async (req, res) => {
 
     /* ------validation -------- */
     if (
-      !fromStation || !toStation || !journeyDate || !seatIds || !Array.isArray(seatIds) || seatIds.length === 0 || !passengerName || !passengerPhon) {
+      !fromStation || !toStation || !journeyDate || !seatIds || !Array.isArray(seatIds) || seatIds.length === 0 || !passengerName || !passengerPhone) {
       return res.status(400).json({ message: "All required fields must be provided" });
     }
 
