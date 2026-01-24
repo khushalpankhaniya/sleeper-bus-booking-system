@@ -98,6 +98,22 @@ https://www.figma.com/design/ruUOl8ZtVCWCVIlmZ0xfbW/Sleeper-Bus-Ticket-Booking?n
 
 ---
 
+###  UI/UX Validation Test Cases
+
+| Test Case | Expected Result |
+|-----------|----------------|
+| Seat Layout Display | Seat map loads clearly with available and booked seats differentiated |
+| Seat Selection | User can select available seats and they appear in summary |
+| Booked Seat Restriction | Booked seats cannot be selected |
+| Meal Selection | Meal options (Veg, Non-Veg, Jain, Kids) are visible and selectable |
+| Passenger Form Validation | User cannot proceed with empty required fields |
+| Phone Number Validation | Only valid 10-digit phone numbers accepted |
+| Review Screen Summary | Route, seats, meal, and passenger info displayed correctly |
+| Prediction Display | Booking confirmation probability (%) visible on review screen |
+| Confirm Booking Flow | User can confirm booking only after valid inputs |
+
+
+ ---
 
 ##  Project Structure
 
