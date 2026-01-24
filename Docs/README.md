@@ -169,3 +169,6 @@ Create a `.env` file in the root directory and add the following environment var
 ```env
 MONGO_DB_URL=mongodb://127.0.0.1:27017/bus_booking
 PORT=
+
+```Run Database Seed
+node config/seed.js
