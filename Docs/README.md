@@ -58,20 +58,18 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ---
 
-## 🎨 UI/UX Design (Prototype)
+##  UI/UX Design (Prototype)
 
 The booking flow UI prototype demonstrates the complete user journey including seat selection, meal booking, passenger details, and booking confirmation with AI-based prediction.
 
 Figma Prototype Link:  
 https://www.figma.com/design/ruUOl8ZtVCWCVIlmZ0xfbW/Sleeper-Bus-Ticket-Booking?node-id=0-1&p=f
 
-> The UI design was adapted from a Figma community template and customized for this Sleeper Bus Booking System.
-
 ---
 
-## 🧪 Test Cases
+##  Test Cases
 
-### ✅ Functional Test Cases
+###  Functional Test Cases
 
 | Test Case | Expected Result |
 |-----------|----------------|
@@ -85,7 +83,7 @@ https://www.figma.com/design/ruUOl8ZtVCWCVIlmZ0xfbW/Sleeper-Bus-Ticket-Booking?n
 
 ---
 
-### ⚠️ Edge Case Test Cases
+###  Edge Case Test Cases
 
 | Test Case | Expected Result |
 |-----------|----------------|
