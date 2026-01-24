@@ -58,8 +58,6 @@ A **mock AI/ML-based booking confirmation prediction** feature is included to es
 
 ---
 
----
-
 ## 🎨 UI/UX Design (Prototype)
 
 The booking flow UI prototype demonstrates the complete user journey including seat selection, meal booking, passenger details, and booking confirmation with AI-based prediction.
@@ -67,7 +65,7 @@ The booking flow UI prototype demonstrates the complete user journey including s
 Figma Prototype Link:  
 https://www.figma.com/design/ruUOl8ZtVCWCVIlmZ0xfbW/Sleeper-Bus-Ticket-Booking?node-id=0-1&p=f
 
-> The UI design was adapted from a Figma community template and customized specifically for this Sleeper Bus Booking System.
+> The UI design was adapted from a Figma community template and customized for this Sleeper Bus Booking System.
 
 ---
 
@@ -75,42 +73,30 @@ https://www.figma.com/design/ruUOl8ZtVCWCVIlmZ0xfbW/Sleeper-Bus-Ticket-Booking?n
 
 ### ✅ Functional Test Cases
 
-| Test Case | Scenario | Expected Result |
-|-----------|---------|----------------|
-| Seat Fetch | GET /api/seats | Returns list of all seats sorted by seat number |
-| Available Seats | GET /api/seats/available | Returns only seats where isAvailable = true |
-| Meal Fetch | GET /api/meals | Returns all meal options |
-| Station Fetch | GET /api/stations | Returns stations sorted by distance |
-| Create Booking | Valid booking request | Booking created, seats marked unavailable, probability returned |
-| Cancel Booking | Valid bookingId | Booking status set to cancelled and seats freed |
-| Booking History | Valid phone number | Returns booking history sorted by date |
+| Test Case | Expected Result |
+|-----------|----------------|
+| Get All Seats API | Returns list of all seats sorted by seat number |
+| Get Available Seats API | Returns seats where isAvailable = true |
+| Get Meals API | Returns all meal options |
+| Get Stations API | Returns stations sorted by distance |
+| Create Booking | Booking created, seats marked unavailable, probability returned |
+| Cancel Booking | Booking status set to cancelled and seats freed |
+| Booking History | Returns booking history sorted by date |
 
 ---
 
 ### ⚠️ Edge Case Test Cases
 
-| Test Case | Scenario | Expected Result |
-|-----------|---------|----------------|
-| Missing Fields | Required fields not provided | 400 – "All required fields must be provided" |
-| Invalid Phone | Phone number ≠ 10 digits | 400 – "Invalid phone number" |
-| Seat Not Found | seatIds not in DB | 404 – "Seat not found" |
-| Seat Already Booked | isAvailable = false | 400 – "Seat already booked" |
-| Cancel Non-existent Booking | Invalid bookingId | 404 – "Reservation not found" |
-| Cancel Already Cancelled | Booking already cancelled | 400 – "Reservation already cancelled" |
-| Invalid History Phone | phone ≠ 10 digits | 400 – "Invalid phone number" |
-| Server Error | DB failure | 500 – Appropriate error message |
-
----
-
-### 🎨 UI/UX Validation Test Cases
-
-| Test Case | Scenario | Expected Result |
-|-----------|---------|----------------|
-| Seat Selection Flow | User selects seats | Selected seats highlighted and shown in summary |
-| Meal Optional | User skips meal | Booking proceeds without meal |
-| Prediction Display | Review screen | Confirmation probability (%) visible |
-| Form Validation | Empty passenger name | User cannot proceed |
-| Booking Confirmation | Successful booking | Success screen with booking ID displayed |
+| Test Case | Expected Result |
+|-----------|----------------|
+| Missing Required Fields | 400 – "All required fields must be provided" |
+| Invalid Phone Number | 400 – "Invalid phone number" |
+| Seat Not Found | 404 – "Seat not found" |
+| Seat Already Booked | 400 – "Seat already booked" |
+| Cancel Non-existent Booking | 404 – "Reservation not found" |
+| Cancel Already Cancelled | 400 – "Reservation already cancelled" |
+| Invalid History Phone | 400 – "Invalid phone number" |
+| Server Error | 500 – Appropriate error message |
 
 ---
 
