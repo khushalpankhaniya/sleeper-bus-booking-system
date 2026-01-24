@@ -6,7 +6,7 @@ AI/ML Software Engineer Assignment
 ---
 
 ##  Project Overview
-This project is a **web-based Sleeper Bus Ticket Booking System** for a sleeper bus operating between **Ahmedabad and Mumbai** with multiple intermediate stations.
+This project is a **Sleeper Bus Ticket Booking System** for a sleeper bus operating between **Ahmedabad and Mumbai** with multiple intermediate stations.
 
 The system allows users to:
 - View sleeper seat availability
