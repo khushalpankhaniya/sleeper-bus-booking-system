@@ -163,6 +163,8 @@ SLEEPER-BUS-BOOKING/
 
 ---
 
+```
+
 ##  Database Seeding (`seed.js`)
 
 The file `config/seed.js` is used to **populate the database with initial data**.  
